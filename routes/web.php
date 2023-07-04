@@ -22,3 +22,5 @@ Route::get('/otherpage', function () {
     $links = config('store.someLinks');
     return view('other', compact('links'));
 });
+
+
