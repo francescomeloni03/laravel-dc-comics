@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Lang;
 
 class resourceController extends Controller
 {
@@ -120,7 +121,7 @@ class resourceController extends Controller
     public function update(Request $request, Comic $comic)
     {
         $data = $this->validateComic( $request->all() );
-        
+
         $data = $request->all();
 
         $comic->title = $data['title'];
